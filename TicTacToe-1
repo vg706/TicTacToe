@@ -14,7 +14,6 @@ def printTabul(Tabul):
 
 
 i = 1
-m = 0
 print('Quem irá jogar primeiro? X ou O')
 rodada = input()
 while i < 9:
@@ -32,7 +31,32 @@ while i < 9:
         rodada = 'O'
     else:
         rodada = 'X'
+
 # printTabul(Tabul)
 # def Vit():
 # print('Você ganhou!')  # + rodada)
+
+'''''
+def CondicVit():
+    for k in range(9):
+        if Cont[0:3]:
+            if Cont[k] == Cont[(k + 1)]:
+                Vit()
+        elif Cont[3:6]:
+            if Cont[k] == Cont[(k + 1)]:
+                Vit()
+        elif Cont[6:8] and Cont[-1] == True:
+            if Cont[k] == Cont[(k + 1)]:
+                Vit()
+        elif(Cont[(k < 7)] == Cont[k + 3]):
+            Vit()
+    for l in range(0, 9, 4):
+        if(Cont[l] == Cont[l + 1]):
+            Vit()
+    for m in range(2, 9, 2):
+        if(Cont[m] == Cont[m + 1]):
+            Vit()
+'''
+
+
 # CondicVit()
