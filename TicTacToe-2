@@ -54,65 +54,16 @@ while i < 9:
                 if m == 2:
                     Vit()
                     break
-                else:
-                    break
         for j in range(2):
             for n in range(3, 6, 3):
                 if Cont[j] == Cont[(j + n)]:
                     m += 1
-                else:
+                if m == 2:
+                    Vit()
                     break
             for l in range(4, 8, 4):
                 if Cont[j] == Cont[(j + l)]:
                     m += 1
-                else:
+                if m == 2:
+                    Vit()
                     break
-
-        '''''        
-        for n in range(0, 9):
-            while m < 2:
-                if Cont[n] != Cont[(n + 1)]:
-                    break
-                else:
-                    m += 1
-                    if m == 0:
-                        break
-                    elif m == 2:
-                        Vit()
-                        break
-                if Cont[n] != Cont[(n + 3)]:
-                    break
-                else:
-                    m += 1
-                    if m == 0:
-                        break
-                    elif m == 2:
-                        Vit()
-    if Vit() == True:
-        break
-
-    if Tabul['A1'] == Tabul['A2'] == Tabul['A3']:
-        Vit()
-        break
-    elif Tabul['B1'] == Tabul['B2'] == Tabul['B3']:
-        Vit()
-        break
-    elif Tabul['C1'] == Tabul['C2'] == Tabul['C3']:
-        Vit()
-        break
-    elif Tabul['A1'] == Tabul['B1'] == Tabul['C1']:
-        Vit()
-        break
-    elif Tabul['A2'] == Tabul['B2'] == Tabul['C2']:
-        Vit()
-        break
-    elif Tabul['A3'] == Tabul['B3'] == Tabul['C3']:
-        Vit()
-        break
-    elif (Tabul['A1'], Tabul['B2'], Tabul['C3']) == lastRodada:
-        Vit()
-        break
-    elif (Tabul['A3'], Tabul['B2'], Tabul['C1']) == lastRodada:
-        Vit()
-        break
-'''
