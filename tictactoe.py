@@ -25,17 +25,20 @@ rodada = input()
 lastRodada = None
 while plays < 9:    # This loop determines the duration of the game// Esse loop determina a duração do jogo
     printTabul(Tabul)
-    resp = input('É a vez da jogada de ' + rodada +
-                 ' Onde quer se posicionar?')   # The input defines the space that will be occupied on the board// O input define o espaço que vai ser ocupado no tabuleiro
-    if Tabul[resp] == lastRodada:   # Condition that shows if the space choosen is occupied or not, if not, registers the answer// Condição que mostra se o espaço escolhido está ocupado ou não, senão, registra a resposta
-        print('Essa posição já foi ocupada')
-    else:
-        try:
-            Tabul[resp] = rodada
-            Cont[(Cont.index(resp))] = rodada
-            plays += 1
-        except ValueError:
+    try:
+        resp = input('É a vez da jogada de ' + rodada +
+                     ' Onde quer se posicionar?')   # The input defines the space that will be occupied on the board// O input define o espaço que vai ser ocupado no tabuleiro
+        if Tabul[resp] == lastRodada:   # Condition that shows if the space choosen is occupied or not, if not, registers the answer// Condição que mostra se o espaço escolhido está ocupado ou não, senão, registra a resposta
             print('Essa posição já foi ocupada')
+        else:
+            try:
+                Tabul[resp] = rodada
+                Cont[(Cont.index(resp))] = rodada
+                plays += 1
+            except ValueError:
+                print('Essa posição já foi ocupada')
+    except KeyError:
+        print('Essa posição não é válida')
 
     if rodada == 'X':   # Determines the order of players throughout the game// Determina a ordem de jogadores ao longo do jogo
         rodada = 'O'
