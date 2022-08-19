@@ -8,6 +8,10 @@ for i in (Tabul):   # Essa lista pode ser usada para acessar as chaves do dicion
     Cont.append(i)
 
 
+def pause():
+    programPause = input("Aperte ENTER para fechar o jogo")
+
+
 def printTabul(Tabul):
     # Each space on the board is represented by this function// Cada espaço no tabuleiro é representado por essa função
     print(Tabul['A1'] + '|' + Tabul['A2'] + '|' + Tabul['A3'] + '\tA1 A2 A3')
@@ -92,4 +96,7 @@ while plays < 9:    # This loop determines the duration of the game// Esse loop 
     if m == 2:
         print(lastRodada + ' ganhou!')
         break
+if m != 2:
+    print('Ninguém ganhou...')
 printTabul(Tabul)
+pause()
