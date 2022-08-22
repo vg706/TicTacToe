@@ -60,7 +60,7 @@ while plays < 9:    # This loop determines the duration of the game// Esse loop 
                     break
             if m == 1:
                 m = 0
-            elif m == 2:
+            elif (m == 2) or (m == 0):
                 break
 
         for f in range(0, 3):   # Vertical win conditions// Condições de vitória vertical
@@ -71,7 +71,7 @@ while plays < 9:    # This loop determines the duration of the game// Esse loop 
                     break
             if m == 1:
                 m = 0
-            elif m == 2:
+            elif (m == 2) or (m == 0):
                 break
 
         # Left diagonal win condition// Condição de vitória da diagonal esquerda
@@ -83,7 +83,7 @@ while plays < 9:    # This loop determines the duration of the game// Esse loop 
         if m == 1:
             m = 0
 
-        # Right diagonal win condition//Condição de vitória da diagonal direita
+        # Right diagonal win condition// Condição de vitória da diagonal direita
         for p in range(2, 6, 2):
             if Cont[p] == Cont[(p + 2)]:
                 m += 1
@@ -93,10 +93,10 @@ while plays < 9:    # This loop determines the duration of the game// Esse loop 
             m = 0
 
     # If any of the win conditions is satisfied, they make m == 2// Se qualquer uma das condições de vitória for satisfeita, elas tornam m == 2
-    if m == 2:
+    if m >= 2:
         print(lastRodada + ' ganhou!')
         break
-if m != 2:
+if m < 2:
     print('Ninguém ganhou...')
 printTabul(Tabul)
 pause()
